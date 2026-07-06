@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main, claude/*]
+    paths:
+      - "experiments/RFC-002-semantic-layer-text-to-sql/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "experiments/RFC-002-semantic-layer-text-to-sql/**"
+
+jobs:
+  rfc002-checks:
+    name: RFC-002 Lint & Test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/RFC-002-semantic-layer-text-to-sql
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Lint
+        run: uv run ruff check .
+
+      - name: Check formatting
+        run: uv run ruff format --check .
+
+      - name: Type check
+        run: uv run mypy src tests
+
+      - name: Run tests
+        run: uv run pytest

@@ -7,11 +7,14 @@ first; this file only adds what's specific to working here as Claude.
 ## What this repo is
 
 An RFC-driven research program testing the "Structure as Coherence Maintenance" framework
-(RFC-001). Six experiments are queued in `proposals/INDEX.md`, each destined for its own
-RFC in `proposals/` and its own folder in `experiments/`.
+(RFC-001). Seven experiments are queued in `proposals/INDEX.md`, each destined for its own
+RFC in `proposals/` and its own folder in `experiments/`. RFC numbers are assigned in
+write order, not §8 section order — RFC-002 targets §8.7, not §8.1 — so check
+`proposals/INDEX.md` for the current RFC-to-§8.N mapping before assuming one.
 
-## When asked to draft an experimental RFC (RFC-002..007)
+## When asked to draft an experimental RFC
 
+- Assign the next free RFC number regardless of which §8.N it targets.
 - Start from the corresponding §8.N section of `proposals/RFC-001-resonance-structure-coherence.md`
   — its Prediction and Method are the seed, not something to rederive from scratch.
 - Explicitly close the gaps RFC-001 names as open for that experiment (see `AGENTS.md`).
@@ -29,10 +32,10 @@ RFC in `proposals/` and its own folder in `experiments/`.
 
 ## Literature and prior-art tasks
 
-Sections like RFC-007's §8.6.1 call for positioning against existing work before a run.
-These are exactly the kind of broad, multi-source lookups worth delegating — use the
-Agent tool (an Explore or general-purpose research agent) rather than asserting prior-art
-familiarity from memory.
+Sections like §8.6.1 (prior-art for the agentic-memory experiment) call for positioning
+against existing work before a run. These are exactly the kind of broad, multi-source
+lookups worth delegating — use the Agent tool (an Explore or general-purpose research
+agent) rather than asserting prior-art familiarity from memory.
 
 ## Git
 

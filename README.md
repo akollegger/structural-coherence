@@ -37,22 +37,25 @@ experiments/     one folder per experimental RFC, holding its code, data, and re
 
 ## Current experiments
 
-Six experiments are queued from RFC-001 §8. See [`proposals/INDEX.md`](proposals/INDEX.md)
-for live status; summary:
+Seven experiments are queued from RFC-001 §8 (§§8.1–8.7). RFC numbers are assigned in
+the order RFCs are written, not in §8's section order — see
+[`proposals/INDEX.md`](proposals/INDEX.md) for the live status and that note in full.
 
 | RFC | § | Experiment |
 |-----|---|------------|
-| RFC-002 | 8.1 | Operationalizing ε, and coherence decay under fixed structure |
-| RFC-003 | 8.2 | Leverage growth and the phase boundary |
-| RFC-004 | 8.3 | The scaling exponents δ and γ, and their trajectories |
-| RFC-005 | 8.4 | Enrichment-only noise amplification |
-| RFC-006 | 8.5 | The programming-language gradient |
-| RFC-007 | 8.6 | Structured memory over task horizon (agentic memory) |
+| RFC-002 | 8.7 | The semantic layer as restored dampening (text-to-SQL) |
+| RFC-003 | 8.1 | Operationalizing ε, and coherence decay under fixed structure |
+| RFC-004 | 8.2 | Leverage growth and the phase boundary |
+| RFC-005 | 8.3 | The scaling exponents δ and γ, and their trajectories |
+| RFC-006 | 8.4 | Enrichment-only noise amplification |
+| RFC-007 | 8.5 | The programming-language gradient |
+| RFC-008 | 8.6 | Structured memory over task horizon (agentic memory) |
 
-RFC-002 is foundational — it operationalizes $\epsilon$, which the other experiments
-build on. RFC-003 depends on RFC-004's exponent estimates for its sharpest test. RFC-007
-is the flagship (most direct test of the core thesis) and additionally requires a
-prior-art survey before it can be frozen.
+RFC-002 was written first because its prior-art base (the semantic-layer/text-to-SQL
+literature) is strong enough to build on directly; it's independent of the rest. Within
+the §8.1–8.6 group: RFC-003 is foundational — it operationalizes $\epsilon$, which
+RFC-004 and RFC-005 build on — and RFC-008 is the flagship (most direct test of the core
+thesis), additionally requiring a prior-art survey before it can be frozen.
 
 See also [`AGENTS.md`](AGENTS.md) for repo conventions, or [`CLAUDE.md`](CLAUDE.md) for
 Claude-Code-specific guidance.

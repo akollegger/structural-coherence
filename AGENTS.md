@@ -11,10 +11,13 @@ each gets its own RFC in `proposals/` and its own execution folder in `experimen
 
 ## RFC conventions
 
-- **Naming:** `proposals/RFC-0NN-<kebab-slug>.md`, numbered in the order RFCs are
-  written — **not** in RFC-001 §8's section order. RFC-002 targets §8.7, for instance,
-  because it was written first; check `proposals/INDEX.md` for which RFC targets which
-  §8.N, don't assume from the number.
+- **Naming:** `proposals/RFC-0NN-<kebab-slug>.md`, numbered by the program's recommended
+  *execution* order — **not** RFC-001 §8's section order. RFC-002 targets §8.7, for
+  instance, because it's a mature, ready-to-run domain experiment, not because §8.7 comes
+  first; check `proposals/INDEX.md` for which RFC targets which §8.N and why it's ordered
+  where it is, don't assume from the number. If the plan is re-sequenced, renumber the
+  affected RFCs/experiment folders to keep this property true rather than letting numbers
+  drift out of execution order — see `proposals/INDEX.md`'s numbering note.
 - **Frozen means frozen.** RFC-001 states its own frozen status explicitly ("Status of
   this document" section) and records changes via a dated Version History list rather
   than silent edits. Follow that convention for every RFC: once an RFC is frozen, don't

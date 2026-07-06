@@ -37,25 +37,28 @@ experiments/     one folder per experimental RFC, holding its code, data, and re
 
 ## Current experiments
 
-Seven experiments are queued from RFC-001 §8 (§§8.1–8.7). RFC numbers are assigned in
-the order RFCs are written, not in §8's section order — see
-[`proposals/INDEX.md`](proposals/INDEX.md) for the live status and that note in full.
+Seven experiments are queued from RFC-001 §8 (§§8.1–8.7). RFC numbers reflect the
+program's recommended execution order — domain-literature maturity first, cross-domain
+synthesis last — not §8's section order. See [`proposals/INDEX.md`](proposals/INDEX.md)
+for the live status and the full sequencing rationale.
 
 | RFC | § | Experiment |
 |-----|---|------------|
 | RFC-002 | 8.7 | The semantic layer as restored dampening (text-to-SQL) |
-| RFC-003 | 8.1 | Operationalizing ε, and coherence decay under fixed structure |
-| RFC-004 | 8.2 | Leverage growth and the phase boundary |
-| RFC-005 | 8.3 | The scaling exponents δ and γ, and their trajectories |
-| RFC-006 | 8.4 | Enrichment-only noise amplification |
-| RFC-007 | 8.5 | The programming-language gradient |
-| RFC-008 | 8.6 | Structured memory over task horizon (agentic memory) |
+| RFC-003 | 8.4 | Enrichment-only noise amplification |
+| RFC-004 | 8.6 | Structured memory over task horizon (agentic memory) |
+| RFC-005 | 8.5 | The programming-language gradient |
+| RFC-006 | 8.1 | Operationalizing ε, and coherence decay under fixed structure |
+| RFC-007 | 8.3 | The scaling exponents δ and γ, and their trajectories |
+| RFC-008 | 8.2 | Leverage growth and the phase boundary |
 
-RFC-002 was written first because its prior-art base (the semantic-layer/text-to-SQL
-literature) is strong enough to build on directly; it's independent of the rest. Within
-the §8.1–8.6 group: RFC-003 is foundational — it operationalizes $\epsilon$, which
-RFC-004 and RFC-005 build on — and RFC-008 is the flagship (most direct test of the core
-thesis), additionally requiring a prior-art survey before it can be frozen.
+The motivation: rather than operationalizing $\epsilon$ in the abstract (the original
+§8.1 framing), let domain experiments with strong prior art — SQL correctness, embedding
+retrieval, agentic memory, code defects — each surface a working, domain-tested
+inconsistency proxy first. RFC-006 then synthesizes those proxies instead of inventing
+one cold, and RFC-007/RFC-008 build on RFC-006 in turn. RFC-002 is independent of this
+chain and is already drafted; RFC-004 (the flagship) additionally requires a prior-art
+survey before it can be frozen.
 
 See also [`AGENTS.md`](AGENTS.md) for repo conventions, or [`CLAUDE.md`](CLAUDE.md) for
 Claude-Code-specific guidance.

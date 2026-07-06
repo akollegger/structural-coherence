@@ -8,9 +8,11 @@ first; this file only adds what's specific to working here as Claude.
 
 An RFC-driven research program testing the "Structure as Coherence Maintenance" framework
 (RFC-001). Seven experiments are queued in `proposals/INDEX.md`, each destined for its own
-RFC in `proposals/` and its own folder in `experiments/`. RFC numbers are assigned in
-write order, not §8 section order — RFC-002 targets §8.7, not §8.1 — so check
-`proposals/INDEX.md` for the current RFC-to-§8.N mapping before assuming one.
+RFC in `proposals/` and its own folder in `experiments/`. RFC numbers reflect the
+program's recommended *execution* order (domain-literature maturity first, cross-domain
+synthesis last), not RFC-001 §8's section order — RFC-002 targets §8.7, not §8.1 — so
+check `proposals/INDEX.md` for the current RFC-to-§8.N mapping and sequencing rationale
+before assuming one.
 
 ## When asked to draft an experimental RFC
 

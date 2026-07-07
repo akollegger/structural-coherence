@@ -5,7 +5,7 @@ experiment-status change.
 
 | RFC | Title | Status | RFC-001 § | Experiment folder |
 |-----|-------|--------|-----------|--------------------|
-| [RFC-001](RFC-001-resonance-structure-coherence.md) | Resonance: A Descriptive Account of How Latent Structure Keeps Growing Information Coherent | Frozen argument (v7); §8 extending | — | — |
+| [RFC-001](RFC-001-resonance-structure-coherence.md) | Resonance: A Descriptive Account of How Latent Structure Keeps Growing Information Coherent | Frozen argument (v8); §8 extending | — | — |
 | [RFC-002](RFC-002-semantic-layer-text-to-sql.md) | The Semantic Layer as Restored Dampening: A Test of the Resonance Framework on Text-to-SQL | Draft (v3) | §8.7 | [`experiments/RFC-002-semantic-layer-text-to-sql/`](../experiments/RFC-002-semantic-layer-text-to-sql/) |
 | RFC-003 | Enrichment-only noise amplification | Not started | §8.4 | [`experiments/RFC-003-enrichment-noise-amplification/`](../experiments/RFC-003-enrichment-noise-amplification/) |
 | RFC-004 | Structured memory over task horizon (agentic memory) | Not started | §8.6 | [`experiments/RFC-004-agentic-memory-horizon/`](../experiments/RFC-004-agentic-memory-horizon/) |

@@ -5,7 +5,7 @@ experiment-status change.
 
 | RFC | Title | Status | RFC-001 § | Experiment folder |
 |-----|-------|--------|-----------|--------------------|
-| [RFC-001](RFC-001-resonance-structure-coherence.md) | Resonance: A Descriptive Account of How Latent Structure Keeps Growing Information Coherent | Frozen argument (v8); §8 extending | — | — |
+| [RFC-001](RFC-001-resonance-structure-coherence.md) | Resonance: A Descriptive Account of How Latent Structure Keeps Growing Information Coherent | Living (v8) | — | — |
 | [RFC-002](RFC-002-semantic-layer-text-to-sql.md) | The Semantic Layer as Restored Dampening: A Test of the Resonance Framework on Text-to-SQL | Draft (v3) | §8.7 | [`experiments/RFC-002-semantic-layer-text-to-sql/`](../experiments/RFC-002-semantic-layer-text-to-sql/) |
 | RFC-003 | Enrichment-only noise amplification | Not started | §8.4 | [`experiments/RFC-003-enrichment-noise-amplification/`](../experiments/RFC-003-enrichment-noise-amplification/) |
 | RFC-004 | Structured memory over task horizon (agentic memory) | Not started | §8.6 | [`experiments/RFC-004-agentic-memory-horizon/`](../experiments/RFC-004-agentic-memory-horizon/) |
@@ -18,8 +18,9 @@ experiment-status change.
 
 - **Not started** — no RFC file yet.
 - **Draft** — RFC file exists, still being written (open effect sizes, null models, etc.).
-- **Frozen** — RFC is complete and stable; edits happen only via an appended version-history entry, per RFC-001's own convention.
-- **Running** — the linked experiment is actively executing against a frozen RFC.
+- **Living** — a framework RFC (RFC-001) that is stable enough to build experiments against but is refined over time by intentional, versioned revision (dated Version History, bumped version label; no silent edits). The fixed reference point is the *version*, not the document: experiments cite and are evaluated against the specific version they target (e.g. RFC-002 → RFC-001 v8 §8.7).
+- **Frozen** — an experiment RFC whose protocol is locked for a run: once it goes to a run its body does not change while it is **Running**, to protect pre-registration. Changes still go through a version-history entry.
+- **Running** — the linked experiment is actively executing under its frozen protocol.
 - **Complete** — `results/RESULTS.md` in the linked experiment folder has a verdict.
 
 ## Numbering note

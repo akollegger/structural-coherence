@@ -18,13 +18,18 @@ each gets its own RFC in `proposals/` and its own execution folder in `experimen
   where it is, don't assume from the number. If the plan is re-sequenced, renumber the
   affected RFCs/experiment folders to keep this property true rather than letting numbers
   drift out of execution order — see `proposals/INDEX.md`'s numbering note.
-- **Frozen means frozen.** RFC-001 states its own frozen status explicitly ("Status of
-  this document" section) and records changes via a dated Version History list rather
-  than silent edits. Follow that convention for every RFC: once an RFC is frozen, don't
-  edit its body — append a version-history entry and, if the change is substantive, bump
-  the version label. Note that RFC-001 itself distinguishes a frozen *argument*
-  (Sections 1–7, 9–11) from an extensible §8 — new experimental sections (like §8.7) can
-  be appended to §8 without unfreezing the rest, provided the version history says so.
+- **Living framework, frozen protocols — both versioned.** RFC-001 (the framework) is a
+  *living* document: refine it intentionally as evidence arrives, but record every change
+  through the dated Version History and, if substantive, a bumped version label — never
+  silent edits. Experiment RFCs (RFC-002 onward) are different: an experiment's protocol
+  *freezes* once it goes to a run and must not change while it is Running, to protect
+  pre-registration. Either way the fixed reference is the *version*, not the document —
+  an experiment cites and is evaluated against the specific RFC-001 version it targets
+  (e.g. RFC-002 → RFC-001 v8 §8.7), so refining RFC-001 later never invalidates a
+  completed run. Refine RFC-001 in place when a change sharpens the same thesis; when a
+  change is a genuinely new thesis rather than a refinement (e.g. the coherence-under-
+  composition dynamics in §10), give it its own follow-up RFC that *extends* RFC-001
+  rather than a revision that quietly diverges from it.
 - **An experimental RFC must close the gaps RFC-001 leaves open** for that experiment
   before it can be frozen: effect sizes, the model-comparison/null-model criterion,
   corpus-size or power requirements, and (for whichever RFC targets §8.6) the §8.6.1

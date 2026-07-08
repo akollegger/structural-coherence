@@ -53,11 +53,60 @@ each gets its own RFC in `proposals/` and its own execution folder in `experimen
   stated against the RFC's Prediction, before any narrative discussion. Quote or restate
   the Prediction for reference immediately after.
 
+## Quick start
+
+From a fresh clone, set up the RFC-002 experiment environment and verify everything
+works:
+
+```bash
+cd experiments/RFC-002-semantic-layer-text-to-sql && uv sync && uv run pytest
+```
+
+`uv sync` installs all dependencies (creates `.venv`), and `uv run pytest` confirms the
+package is importable and tests pass.
+
+## Build and test commands
+
+This repo has no top-level build step — it's primarily RFC documents. Experiment folders
+that contain code each manage their own toolchain. Currently only RFC-002 has a Python
+project skeleton:
+
+```bash
+# From experiments/RFC-002-semantic-layer-text-to-sql/:
+uv sync                       # install all dependencies (creates .venv)
+uv run pytest                 # run unit tests
+uv run ruff check .           # lint
+uv run ruff format --check .  # verify formatting
+uv run mypy src tests         # type check
+```
+
+`uv` is the package manager (lockfile: `uv.lock`). Each future experiment will declare
+its own deps and tooling in its `pyproject.toml` — always run commands from inside the
+experiment folder, not the repo root.
+
+CI runs lint, format check, type check, and tests on every push and PR via
+`.github/workflows/ci.yml`. As new experiments add their own tooling, extend that
+workflow with additional jobs or matrix entries.
+
+## Environment variables
+
+No environment variables are required by the current codebase — the RFC-002 skeleton has
+no pipeline logic yet. Anticipated variables (LLM API keys, database connection strings)
+are listed in `experiments/RFC-002-semantic-layer-text-to-sql/.env.example`. Copy that
+file to `.env` and fill in values once the `db` and `llm` optional-dependency groups are
+populated after RFC-002 is frozen.
+
 ## Writing style
 
 RFC and RESULTS prose follows RFC-001's register: precise, hedged where the argument is
 genuinely uncertain, plain where it isn't. Don't inflate confidence in a results write-up
 beyond what the data shows, and don't hedge past what the data actually settles.
+
+## Code style
+
+Python code follows PEP 8 naming conventions enforced by ruff's `N` rule set:
+snake_case for functions and variables, PascalCase for classes, UPPER_SNAKE_CASE for
+constants. Test files follow the `test_*.py` pattern (configured in pytest.ini_options).
 
 ## Research tasks
 
